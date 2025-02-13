@@ -16,23 +16,23 @@ class Cheese extends StatelessWidget {
           backgroundColor: const Color.fromARGB(255, 42, 20, 70),
           title: Row(
             children: [
-              Text(
-                'Cheese pizza',
+              const Text(
+                'Cheese Pizza',
                 style: TextStyle(fontSize: 20.0, color: Colors.white),
               ),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '3');
                 },
-               child: Icon(Icons.tiktok, size: 40, color: Colors.white,),
+                child: const Icon(Icons.tiktok, size: 40, color: Colors.white),
               ),
-              SizedBox(width: 20),
+              const SizedBox(width: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.pushNamed(context, '4');
                 },
-                child: Icon(Icons.facebook,size: 40, color: Colors.white,),
+                child: const Icon(Icons.facebook, size: 40, color: Colors.white),
               ),
             ],
           ),
@@ -40,25 +40,24 @@ class Cheese extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 40), 
+              const SizedBox(height: 40),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0), 
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Wrap(
                   alignment: WrapAlignment.center,
                   spacing: 10,
-                  runSpacing: 10, 
+                  runSpacing: 10,
                   children: [
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        side: BorderSide(color: Colors.white),
+                        shape: const StadiumBorder(),
+                        side: const BorderSide(color: Colors.white),
                         backgroundColor: const Color.fromARGB(255, 58, 45, 45),
-                        
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10), 
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       ),
-                      child: Text(
+                      child: const Text(
                         'V Pizza',
-                        style: TextStyle(fontSize: 15 , color: Colors.white),
+                        style: TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, '0');
@@ -66,13 +65,13 @@ class Cheese extends StatelessWidget {
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        side: BorderSide(color: Colors.white),
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                            backgroundColor: const Color.fromARGB(255, 58, 45, 45),
+                        shape: const StadiumBorder(),
+                        side: const BorderSide(color: Colors.white),
+                        backgroundColor: const Color.fromARGB(255, 58, 45, 45),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       ),
-                      child: Text(
-                        'Ch pizza',
+                      child: const Text(
+                        'Ch Pizza',
                         style: TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       onPressed: () {
@@ -81,14 +80,14 @@ class Cheese extends StatelessWidget {
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        shape: StadiumBorder(),
-                        side: BorderSide(color: Colors.white),
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                            backgroundColor: const Color.fromARGB(255, 58, 45, 45),
+                        shape: const StadiumBorder(),
+                        side: const BorderSide(color: Colors.white),
+                        backgroundColor: const Color.fromARGB(255, 58, 45, 45),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Fries',
-                        style: TextStyle(fontSize: 15, color: Colors.white,),
+                        style: TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       onPressed: () {
                         Navigator.pushNamed(context, '2');
@@ -102,25 +101,35 @@ class Cheese extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                    Container(
-                     margin: EdgeInsets.all(16),
-                     height: 150,
-                     decoration: BoxDecoration(
-                     color: Colors.grey[200],
-                     borderRadius: BorderRadius.circular(8),
-                     image: DecorationImage(
-                     image: AssetImage('image/cheese.jpg'), // Replace with your image asset
-                     fit: BoxFit.cover,
-                    ),
-                    ),
-                    ),
-                      // Image.asset(
-                      //   'image/cheese.jpg',
-                      //   fit: BoxFit.contain, 
-                      //   width: 500, 
-                      //   height: 200
-                      // ),
-                      SizedBox(height: 20), 
+                      Container(
+                        margin: const EdgeInsets.all(16),
+                        height: 150,
+                        decoration: BoxDecoration(
+                          color: Colors.grey[200],
+                          borderRadius: BorderRadius.circular(8),
+                          image: const DecorationImage(
+                            image: AssetImage('image/cheese.jpg'), // Ensure this path is correct
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        'Delicious cheese pizza with a blend of mozzarella and cheddar cheese.',
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () {
+                          // Implement order functionality here
+                        },
+                        child: const Text('Order Now'),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.green, // Button color
+                          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                        ),
+                      ),
                     ],
                   ),
                 ),
